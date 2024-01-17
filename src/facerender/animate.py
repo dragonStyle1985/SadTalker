@@ -199,7 +199,7 @@ class AnimateFromCoeff():
         if original_size:
             result = [ cv2.resize(result_i,(img_size, int(img_size * original_size[1]/original_size[0]) )) for result_i in result ]
         
-        video_name = x['video_name']  + '.mp4'
+        video_name = x['video_name'] + '.mp4'
         path = os.path.join(video_save_dir, 'temp_'+video_name)
         
         imageio.mimsave(path, result,  fps=float(25))
@@ -215,7 +215,7 @@ class AnimateFromCoeff():
         sound = AudioSegment.from_file(audio_path)
         frames = frame_num 
         end_time = start_time + frames*1/25*1000
-        word1=sound.set_frame_rate(16000)
+        word1 = sound.set_frame_rate(16000)
         word = word1[start_time:end_time]
         word.export(new_audio_path, format="wav")
 
@@ -234,7 +234,7 @@ class AnimateFromCoeff():
 
         #### paste back then enhancers
         if enhancer:
-            video_name_enhancer = x['video_name']  + '_enhanced.mp4'
+            video_name_enhancer = x['video_name'] + '_enhanced.mp4'
             enhanced_path = os.path.join(video_save_dir, 'temp_'+video_name_enhancer)
             av_path_enhancer = os.path.join(video_save_dir, video_name_enhancer) 
             return_path = av_path_enhancer

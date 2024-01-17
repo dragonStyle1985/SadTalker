@@ -1,0 +1,5 @@
+python inference.py --driven_audio examples/driven_audio/bus_chinese.wav --source_image examples/source_image/zxn_0.jpg --enhancer lip
+
+python inference.py --driven_audio examples/driven_audio/bus_chinese.wav --source_image examples/source_image/zxn_0.png --still --preprocess full --enhancer gfpgan
+
+python inference.py --driven_audio examples/driven_audio/bus_chinese.wav --source_image examples/ref_video/WDA_KatieHill_000.mp4 --still --preprocess full --enhancer gfpgan
